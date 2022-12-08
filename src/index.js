@@ -6,6 +6,7 @@ import { day4Solution } from './Day4';
 import { day5Solution } from './Day5';
 import { day6Solution } from './Day6';
 import { day7Solution } from './Day7';
+import { day8Solution } from './Day8';
 
 const day1 = day1Solution();
 const day2 = day2Solution();
@@ -14,8 +15,10 @@ const day4 = day4Solution();
 const day5 = day5Solution();
 const day6 = day6Solution();
 const day7 = day7Solution();
+const day8 = day8Solution();
 
-const solutions = [day1, day2, day3, day4, day5, day6, day7];
+
+const solutions = [day1, day2, day3, day4, day5, day6, day7, day8];
 
 const solutionsHTML = solutions
   .map(
