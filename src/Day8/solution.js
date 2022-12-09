@@ -21,9 +21,6 @@ const isLargestTreeInList = (tree, list) => {
   return Math.max(...list) < tree;
 }
 const calcViewDistance = (tree, list, direction) => {
-  if (list.length < 10) {
-    console.log(tree, list, direction);
-  }
   if (direction < 0) list.reverse();
   let score = 0;
   for (let i = 0; i < list.length; i++) {
@@ -31,9 +28,6 @@ const calcViewDistance = (tree, list, direction) => {
     if (list[i] >= tree) {
       break;
     }
-  }
-  if (list.length < 10) {
-    console.log('score', score);
   }
   return score;
 }
@@ -58,7 +52,7 @@ export const day8Solution = () => {
         visibleTrees++;
         const [scoreLeft, scoreRight, scoreTop, scoreBottom] = [left, right, top, bottom].map((list, index) => calcViewDistance(currentTree, list, directions[index]))
         const treeScore = scoreLeft * scoreRight * scoreTop * scoreBottom;
-        console.log(scoreLeft, scoreRight, scoreTop, scoreBottom);
+
         if (treeScore > answer2) {
           answer2 = treeScore;
         }
